@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="container">
+        <div class="header">
+            <h1>💵 Tip Calculator</h1>
+            <p>Calculate tips and split bills easily</p>
+            <span class="currency-badge">🇮🇳 Indian Rupees (₹)</span>
+        </div>
+
+        <div class="input-group">
+            <label class="input-label">Bill Amount</label>
+            <div class="input-wrapper">
+                <span class="input-icon">₹</span>
+                <input 
+                    type="number" 
+                    id="billAmount" 
+                    placeholder="0.00" 
+                    step="0.01"
+                    min="0"
+                >
+            </div>
+            <div class="error-message" id="billError">Please enter a valid bill amount</div>
+        </div>
+
+        <div class="input-group">
+            <label class="input-label">Select Tip Percentage</label>
+            <div class="tip-buttons">
+                <button class="tip-btn" data-tip="10">10%</button>
+                <button class="tip-btn" data-tip="15">15%</button>
+                <button class="tip-btn" data-tip="18">18%</button>
+                <button class="tip-btn" data-tip="20">20%</button>
+                <button class="tip-btn" data-tip="25">25%</button>
+                <button class="tip-btn" data-tip="custom">Custom</button>
+            </div>
+            <div class="custom-tip-wrapper" id="customTipWrapper" style="display: none;">
+                <div class="input-wrapper">
+                    <span class="input-icon">%</span>
+                    <input 
+                        type="number" 
+                        id="customTip" 
+                        class="custom-tip-input"
+                        placeholder="Enter custom %" 
+                        step="1"
+                        min="0"
+                    >
+                </div>
+            </div>
+            <div class="error-message" id="tipError">Please select or enter a tip percentage</div>
+        </div>
+
+        <div class="input-group">
+            <label class="input-label">Number of People</label>
+            <div class="input-wrapper">
+                <span class="input-icon">👥</span>
+                <input 
+                    type="number" 
+                    id="numPeople" 
+                    placeholder="1" 
+                    min="1"
+                    value="1"
+                >
+            </div>
+            <div class="error-message" id="peopleError">Please enter number of people (minimum 1)</div>
+        </div>
+
+        <button class="calculate-btn" id="calculateBtn">Calculate Tip</button>
+
+        <div class="results" id="results">
+            <div class="result-header">💰 Your Bill Breakdown</div>
+            
+            <div class="result-item">
+                <span class="result-label">Tip Amount</span>
+                <span class="result-value" id="tipAmount">₹0.00</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">Total Bill</span>
+                <span class="result-value" id="totalAmount">₹0.00</span>
+            </div>
+
+            <div class="result-item highlight">
+                <span class="result-label">💵 Tip Per Person</span>
+                <span class="result-value" id="tipPerPerson">₹0.00</span>
+            </div>
+
+            <div class="result-item highlight">
+                <span class="result-label">💰 Total Per Person</span>
+                <span class="result-value" id="totalPerPerson">₹0.00</span>
+            </div>
+
+            <div class="breakdown">
+                <div class="breakdown-title">Calculation Details:</div>
+                <div id="breakdownText"></div>
+            </div>
+
+            <button class="reset-btn" id="resetBtn">Start New Calculation</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

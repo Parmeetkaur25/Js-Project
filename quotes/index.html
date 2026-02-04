@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+        <div class="header">
+            <h1>💭 Quote Generator</h1>
+            <p>Get inspired with wisdom from great minds</p>
+        </div>
+
+        <div class="category-tags">
+            <div class="category-tag active" data-category="all">All Quotes</div>
+            <div class="category-tag" data-category="motivation">Motivation</div>
+            <div class="category-tag" data-category="life">Life</div>
+            <div class="category-tag" data-category="success">Success</div>
+            <div class="category-tag" data-category="wisdom">Wisdom</div>
+        </div>
+
+        <div class="quote-container">
+            <div class="quote-icon">"</div>
+            <div id="quoteDisplay">
+                <div class="placeholder">Click "Generate Quote" to get inspired! ✨</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn generate-btn" id="generateBtn">
+                <span>🔄</span>
+                <span>Generate Quote</span>
+            </button>
+            <button class="btn copy-btn" id="copyBtn">
+                <span>📋</span>
+                <span>Copy</span>
+            </button>
+            <button class="btn share-btn" id="shareBtn">
+                <span>🔗</span>
+                <span>Share</span>
+            </button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalQuotes">50</div>
+                <div class="stat-label">Total Quotes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="quotesGenerated">0</div>
+                <div class="stat-label">Generated</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="favoriteCount">0</div>
+                <div class="stat-label">Favorites</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+<script src="script.js"></script>
+</body>
+</html>
